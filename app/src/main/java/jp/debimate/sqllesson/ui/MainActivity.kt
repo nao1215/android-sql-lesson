@@ -1,4 +1,4 @@
-package jp.debimate.sqllesson
+package jp.debimate.sqllesson.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
