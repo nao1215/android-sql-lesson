@@ -1,7 +1,11 @@
 package jp.debimate.sqllesson.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+
 
 /**
  * Activityは、Androidアプリの画面に相当する。画面がないアプリの場合は、Activityがない。
@@ -12,7 +16,7 @@ import android.os.Bundle
  * AppCompatActivityは、新しいAPIレベルで追加された機能を古いAPIレベルで使用可能にするクラスである。
  * （新機能のバックポートをしているクラスである）
  */
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity()  {
     /**
      * Androidアプリ起動時に、最初に実行されるメソッド（エントリーポイント）
      * Activityにはライフサイクルがあり、呼び出すメソッドには対応関係がある。
@@ -34,5 +38,11 @@ class MainActivity : AppCompatActivity() {
          * レイアウトファイルactivity_main.xmlを読み込む。
          */
         setContentView(R.layout.activity_main)
+
+        val textMessage = findViewById<TextView>(R.id.main_text)
+        val mainButton = findViewById<Button>(R.id.main_button)
+        mainButton.setOnClickListener{
+            textMessage.text = "abc"
+        }
     }
 }
